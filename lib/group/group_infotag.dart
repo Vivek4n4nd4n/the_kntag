@@ -83,7 +83,7 @@ class _GroupInfoState extends State<GroupInfo> {
                     date: grouptag[index].date,
                     time: grouptag[index].time,
                     location: grouptag[index].location,
-                    profimg: grouptag[index].Profimg,
+                    profimg: grouptag[index].profimg,
                   );
                 }),
             ListView.builder(

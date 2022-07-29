@@ -9,7 +9,7 @@ import 'package:open_street_map_search_and_pick/widgets/wide_button.dart';
 import 'package:the_kntag/colors.dart';
 
 class Gmap extends StatefulWidget {
-  final LatLong center = LatLong(12, 76);
+  final LatLong center = LatLong(11, 77);
 
   final void Function(PickedData pickedData) onPicked;
   Gmap({Key? key, required this.onPicked}) : super(key: key);

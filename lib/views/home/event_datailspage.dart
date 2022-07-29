@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:latlong2/latlong.dart';
-import 'package:the_kntag/views/home/event_achivedpage.dart';
+
+//import 'package:the_kntag/views/home/event_achivedpage.dart';
 import 'package:the_kntag/views/home/event_exp.dart';
 
 import '../../colors.dart';
@@ -128,7 +128,7 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Container(
+              child: SizedBox(
                 height: height * 0.13,
                 child: Column(
                   children: [
@@ -237,9 +237,10 @@ class _EventDetailsPageState extends State<EventDetailsPage> {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
-                          builder: ((context) => EventAchievdPage())));
+                          builder: ((context) => EventExpiredPage())));
                 },
-                child: Text('Send joind request'),
+                // ignore: sort_child_properties_last
+                child: const Text('Send joind request'),
                 style: ElevatedButton.styleFrom(primary: blue),
               ),
             ),

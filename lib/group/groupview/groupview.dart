@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:sizer/sizer.dart';
 import 'package:the_kntag/group/constructor.dart';
 import 'package:the_kntag/group/groups.dart';
 
@@ -61,33 +60,36 @@ class _GroupViewState extends State<GroupView> {
     return Scaffold(
       backgroundColor: Color.fromARGB(255, 206, 221, 234),
       appBar: AppBar(
-        backgroundColor:  Color.fromARGB(255, 206, 221, 234),
+        backgroundColor: Color.fromARGB(255, 206, 221, 234),
         elevation: 0,
         centerTitle: false,
         title: Container(
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(6), color: Colors.white),
-          height: height * 0.07,
+          height: 8.h,
           width: width * 0.75,
           child: Row(children: [
             const Expanded(
               child: Padding(
                 padding: EdgeInsets.only(left: 7),
                 child: TextField(
-                  decoration:InputDecoration(
-                    border: InputBorder.none,
-                    hintText: 'Search Group') ,
+                  decoration: InputDecoration(
+                      border: InputBorder.none, hintText: 'Search Group'),
                   keyboardType: TextInputType.name,
                 ),
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left:8.0,right: 8,bottom: 16,top: 4),
-              child: IconButton(onPressed: () {}, icon: Icon(Icons.search,color: Colors.black,)),
+              padding: const EdgeInsets.only(
+                  left: 8.0, right: 8, bottom: 16, top: 4),
+              child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.search,
+                    color: Colors.black,
+                  )),
             ),
-            
-
-                    ]),
+          ]),
         ),
         actions: [
           Column(
@@ -95,26 +97,26 @@ class _GroupViewState extends State<GroupView> {
               Expanded(
                 flex: 2,
                 child: IconButton(
-                   color: Color.fromARGB(255, 9, 76, 203),
+                    color: Color.fromARGB(255, 9, 76, 203),
                     onPressed: () {
                       showAlertBox();
                     },
                     icon: Icon(Icons.location_on)),
               ),
-                   Expanded(
-                     child: Text(
-                      '23km',
-                      style: TextStyle(
-                          fontSize: 10, color: Color.fromARGB(255, 9, 76, 203)),
-                                     ),
-                   ),
+              Expanded(
+                child: Text(
+                  '23km',
+                  style: TextStyle(
+                      fontSize: 10, color: Color.fromARGB(255, 9, 76, 203)),
+                ),
+              ),
             ],
           )
         ],
       ),
       body: Column(
         children: [
-                  Expanded(
+          Expanded(
             child: ListView.builder(
                 itemCount: grouptile.length,
                 itemBuilder: (context, index) {

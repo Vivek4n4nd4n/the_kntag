@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:the_kntag/views/home/homeview.dart';
+import 'package:the_kntag/massege/Chat/msg_widow_chat.dart';
+//import 'package:the_kntag/massege/Chat/msg_widow_chat.dart';
 
+// ignore: must_be_immutable
 class MsgTabs extends StatefulWidget {
   String title;
   String joind;
@@ -27,52 +29,60 @@ class _MsgTabsState extends State<MsgTabs> {
 
     return Padding(
       padding: const EdgeInsets.all(7.0),
-      child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(6),
-            color: Colors.white,
-          ),
-          height: height * 0.15,
-          width: width * 0.9,
-          child: Row(children: [
-            Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: Text(
-                  textAlign: TextAlign.start,
-                  widget.title,
-                  style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 14,
-                      color: Color.fromARGB(255, 9, 76, 203)),
-                ),
+    
+        
+        child: GestureDetector(
+          onTap: (){Navigator.push(context,
+                  MaterialPageRoute(builder: (context) =>Chatwindow(prof: widget.prof,
+                  title: widget.title,joined: widget.joind,) ));},
+          child: Container(
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(6),
+                color: Colors.white,
               ),
-              Text(widget.joind),
-              Text(widget.spot),
-            ]),
-            SizedBox(
-              width: width * 0.25,
-            ),
-            Column(
-              children: [
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Row(children: [
-Icon(Icons.location_pin),
-Icon(Icons.chat),
-                  ],),
+              height: height * 0.15,
+              width: width * 0.9,
+              child: Row(children: [
+                Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(
+                      textAlign: TextAlign.start,
+                      widget.title,
+                      style: const TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 14,
+                          color: Color.fromARGB(255, 9, 76, 203)),
+                    ),
+                  ),
+                  Text(widget.joind),
+                  Text(widget.spot),
+                ]),
+                SizedBox(
+                  width: width * 0.25,
                 ),
-                
-                
-                buildStackedImage(),
-              ],
-            ),
-          ])),
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Row(
+                        children:const [
+                          Icon(Icons.location_pin),
+                          Icon(Icons.chat),
+                        ],
+                      ),
+                    ),
+                    buildStackedImage(),
+                  ],
+                ),
+              ])),
+        ),
+      
     );
   }
 
   Widget buildStackedImage() {
-    final double size = 38;
+   final double size = 38;
     final urlImages = widget.prof;
     final items = urlImages.map((urlImage) => buildImage(urlImage)).toList();
     return StackedWidgets(

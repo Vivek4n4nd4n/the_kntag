@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:latlong2/latlong.dart';
 import 'package:the_kntag/views/home/event_exp.dart';
 
 import '../../colors.dart';

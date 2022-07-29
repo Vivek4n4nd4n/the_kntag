@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_kntag/colors.dart';
 import 'package:the_kntag/group/constructor.dart';
-import 'package:the_kntag/massege/msg_construct.dart';
+//import 'package:the_kntag/massege/msg_construct.dart';
 import 'package:the_kntag/profile/prof_savedpage.dart';
 
 class ProfSaveView extends StatefulWidget {
@@ -15,6 +15,7 @@ class _ProfSaveViewState extends State<ProfSaveView> {
   List<Groupdatas> savelist = [];
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     savelist = groups();
@@ -64,7 +65,7 @@ class _ProfSaveViewState extends State<ProfSaveView> {
                 bokimg: savelist[index].prof,
                 spot: savelist[index].spot,
                 joined: savelist[index].joined,
-                profimg: savelist[index].Profimg,
+                profimg: savelist[index].profimg,
               );
             }));
   }

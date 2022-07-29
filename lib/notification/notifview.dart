@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_kntag/colors.dart';
 import 'package:the_kntag/notification/notif_construct.dart';
 import 'package:the_kntag/notification/notifmodel.dart';
-import 'package:the_kntag/massege/msgtabs.dart';
+//import 'package:the_kntag/massege/msgtabs.dart';
 
 class Notifview extends StatefulWidget {
   const Notifview({Key? key}) : super(key: key);
@@ -15,6 +15,7 @@ class _NotifviewState extends State<Notifview> {
   List<NotifData> notlist = [];
   @override
   void initState() {
+    // ignore: todo
     // TODO: implement initState
     super.initState();
     notlist = notif();

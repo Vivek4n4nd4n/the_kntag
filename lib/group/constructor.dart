@@ -3,21 +3,19 @@ class Groupdatas {
   String spot;
   String joined;
   String prof;
-  String Profimg;
+  // ignore: non_constant_identifier_names
+  String profimg;
   String date;
   String time;
   String location;
   List pic;
-  // String pic2;
-  // String pic3;
-  //String pic4;
-
   Groupdatas({
     required this.title,
     required this.joined,
     required this.spot,
     required this.prof,
-    required this.Profimg,
+    // ignore: non_constant_identifier_names
+    required this.profimg,
     required this.date,
     required this.time,
     required this.location,
@@ -28,7 +26,7 @@ class Groupdatas {
   });
 }
 
-String title = '#BookClub';
+//String title = '#BookClub';
 String joined = '13 joined';
 String spot = '12/25 spot left';
 String date = '13 feb 2022';
@@ -52,7 +50,7 @@ groups() {
     title: '',
     spot: '',
     prof: '',
-    Profimg: '',
+    profimg: '',
     date: '',
     time: '',
     location: '',
@@ -60,11 +58,11 @@ groups() {
   );
 //1
   details = Groupdatas(
-    title: title,
+    title: '#Book Club',
     spot: spot,
     joined: joined,
     prof: prof,
-    Profimg: profimg,
+    profimg: profimg,
     date: date,
     time: time,
     location: location,
@@ -75,11 +73,11 @@ groups() {
 
 //2
   details = Groupdatas(
-    title: "herkjlfer",
+    title: "#Music Club",
     spot: spot,
     joined: joined,
-    prof: prof,
-    Profimg: profimg,
+    prof: 'https://yt3.ggpht.com/djdtXJfeK-YN5XPFN1LhQUAUKtKiNWpMcYKMLSS3qYUwhHU3fK2gTsyXu0xBvuqPiGy6SVLmrQ=s900-c-k-c0x00ffffff-no-rj',
+    profimg: profimg,
     date: date,
     time: time,
     location: location,
@@ -91,11 +89,11 @@ groups() {
   //3
 
   details = Groupdatas(
-    title: title,
+    title: '#Comedy Show',
     spot: spot,
     joined: joined,
-    prof: prof,
-    Profimg: profimg,
+    prof: 'https://i.gifer.com/origin/6b/6b6c468ee632e45189372f601e41d28f_w200.gif',
+    profimg: profimg,
     date: date,
     time: time,
     location: location,
@@ -107,11 +105,11 @@ groups() {
 //4
 
   details = Groupdatas(
-    title: title,
+    title: '#Magic show',
     spot: spot,
     joined: joined,
-    prof: prof,
-    Profimg: profimg,
+    prof: 'https://media.istockphoto.com/photos/hands-of-magician-doing-tricks-with-a-deck-of-cards-picture-id1183464120?k=20&m=1183464120&s=612x612&w=0&h=808ddL-J-tCtFtsMyD84eEB8bcRjDH3geX6LNfgeCAQ=',
+    profimg: profimg,
     date: date,
     time: time,
     location: location,
@@ -123,11 +121,11 @@ groups() {
 //5
 
   details = Groupdatas(
-    title: title,
+    title: '#Swimming Club',
     spot: spot,
     joined: joined,
-    prof: prof,
-    Profimg: profimg,
+    prof: 'https://media.istockphoto.com/photos/baby-twin-boy-and-girl-floating-on-swim-rings-picture-id628951466?s=170667a',
+    profimg: profimg,
     date: date,
     time: time,
     location: location,
@@ -139,11 +137,11 @@ groups() {
 //6
 
   details = Groupdatas(
-    title: title,
+    title: '#Laughing Club',
     spot: spot,
     joined: joined,
-    prof: prof,
-    Profimg: profimg,
+    prof: 'https://psmag.com/.image/ar_4:3%2Cc_fill%2Ccs_srgb%2Cfl_progressive%2Cq_auto:good%2Cw_1200/MTI3NTgyMzc1MDQyMzkwNDk0/laugh.jpg',
+    profimg: profimg,
     date: date,
     time: time,
     location: location,

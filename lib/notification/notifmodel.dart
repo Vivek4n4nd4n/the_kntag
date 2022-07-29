@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_kntag/colors.dart';
 
+// ignore: must_be_immutable
 class Notifmodel extends StatefulWidget {
   String img;
   String name;

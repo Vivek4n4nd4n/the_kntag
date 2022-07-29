@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:the_kntag/colors.dart';
 
 class Tagview extends StatefulWidget {
   String title;
@@ -55,15 +56,19 @@ class _TagviewState extends State<Tagview> {
                 )
               ],
             ),
-            SizedBox(width: width*0.05,),
-            Column(children: [
-              Expanded(child: CircleAvatar(child: ClipOval(child: Image.network(widget.profimg,fit: BoxFit.cover,)))),
-              Expanded(
-                flex:2,
-                child: Image.network(widget.prof1,height: height*0.2,width: width*0.2,),
-              ),
-
-            ],)
+            SizedBox(width: width*0.01,),
+            Container(height: height*0.18,
+            width:width*0.3 ,
+              child: Stack(children: [
+               
+                Positioned(
+                  top: 10,
+                  left: 15,
+                  child: Image.network(widget.prof1,height: height*0.2,width: width*0.2,)),
+Positioned(left: 30,top: 15,
+  child: CircleAvatar(backgroundImage: NetworkImage(widget.profimg,),))
+              ],),
+            )
           ],
         ),
       ),

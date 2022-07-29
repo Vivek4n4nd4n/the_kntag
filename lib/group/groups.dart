@@ -36,41 +36,44 @@ class _GrouptagState extends State<Groups> {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => GroupInfo()));
             },
-            child: Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(6),
-                  color: Colors.white,
-                ),
-                height: height * 0.15,
-                width: width * 0.9,
-                child: Row(children: [
-                  Column(mainAxisAlignment: MainAxisAlignment.start, children: [
-                    Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(
-                        textAlign: TextAlign.start,
-                        widget.title,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 14,
-                            color: Color.fromARGB(255, 9, 76, 203)),
+            child: Padding(
+              padding: const EdgeInsets.only(left: 8,right: 8),
+              child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(6),
+                    color: Colors.white,
+                  ),
+                  height: height * 0.15,
+                  width: width * 0.95,
+                  child: Row(children: [
+                    Column(mainAxisAlignment: MainAxisAlignment.start, children: [
+                      Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text(
+                          textAlign: TextAlign.start,
+                          widget.title,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 14,
+                              color: Color.fromARGB(255, 9, 76, 203)),
+                        ),
                       ),
+                      Text(widget.joined),
+                      Text(widget.spot),
+                    ]),
+                    SizedBox(
+                      width: width * 0.25,
                     ),
-                    Text(widget.joined),
-                    Text(widget.spot),
-                  ]),
-                  SizedBox(
-                    width: width * 0.25,
-                  ),
-                  Column(
-                    children: [
-                      SizedBox(
-                        height: height * 0.08,
-                      ),
-                      buildStackedImage(),
-                    ],
-                  ),
-                ])),
+                    Column(
+                      children: [
+                        SizedBox(
+                          height: height * 0.08,
+                        ),
+                        buildStackedImage(),
+                      ],
+                    ),
+                  ])),
+            ),
           ),
         ],
       ),

@@ -4,7 +4,7 @@ import 'package:the_kntag/group/constructor.dart';
 import 'package:the_kntag/profile/prof_save_view.dart';
 import 'package:the_kntag/profile/prof_savedpage.dart';
 
-import '../massege/msg_construct.dart';
+
 
 class ProfilePage extends StatefulWidget {
   const ProfilePage({Key? key}) : super(key: key);
@@ -192,7 +192,7 @@ class _ProfilePageState extends State<ProfilePage> {
                         bokimg: savelist[index].prof,
                         spot: savelist[index].spot,
                         joined: savelist[index].joined,
-                        profimg: savelist[index].Profimg,
+                        profimg: savelist[index].profimg,
                       );
                     }),
               ),

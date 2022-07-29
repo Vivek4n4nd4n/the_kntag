@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
+import 'package:persistent_bottom_nav_bar_v2/persistent-tab-view.dart';
+//import 'package:persistent_bottom_nav_bar/persistent-tab-view.dart';
 //import 'package:the_kntag/bottombar/notification/notifview.dart';
 import 'package:the_kntag/colors.dart';
 import 'package:the_kntag/creattag/creat_tagview.dart';
@@ -9,8 +10,9 @@ import 'package:the_kntag/views/home/homeview.dart';
 
 import '../group/groupview/groupview.dart';
 
-class Bottombar extends StatelessWidget {
-  PersistentTabController _controller =
+// ignore: must_be_immutable
+class  Bottombar extends StatelessWidget {
+  final PersistentTabController _controller =
       PersistentTabController(initialIndex: 0);
 
   Bottombar({Key? key}) : super(key: key);
@@ -22,14 +24,14 @@ class Bottombar extends StatelessWidget {
       const CreatTagview(),
       const Notifview(),
       // Notifmodel(img: '', name: '', description: '', mycontact: '')
-       Massage()
+       const Massage()
     ];
   }
 
   List<PersistentBottomNavBarItem> _navBarsItems() {
     return [
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.location_pin),
+        icon:const Icon(Icons.location_pin),
         title: ("Home"),
         activeColorPrimary: blue,
         //titleColor,
@@ -37,7 +39,7 @@ class Bottombar extends StatelessWidget {
         // CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.people),
+        icon:const Icon(Icons.people),
         title: ("Group"),
         activeColorPrimary: blue,
         //titleColor,
@@ -45,7 +47,7 @@ class Bottombar extends StatelessWidget {
         //CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.add_box_rounded),
+        icon:const Icon(Icons.add_box_rounded),
         title: ("Post"),
         activeColorPrimary:blue,
         // titleColor,
@@ -53,7 +55,7 @@ class Bottombar extends StatelessWidget {
         //CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.notifications),
+    icon:const Icon(Icons.notifications),
         title: ("Notifications"),
         activeColorPrimary: blue,
         //titleColor,
@@ -61,7 +63,7 @@ class Bottombar extends StatelessWidget {
         //CupertinoColors.systemGrey,
       ),
       PersistentBottomNavBarItem(
-        icon: Icon(Icons.chat),
+        icon:const Icon(Icons.chat),
         title: ("Settings"),
         activeColorPrimary:blue,
         // titleColor,

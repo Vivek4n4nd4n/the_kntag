@@ -119,8 +119,8 @@ class _LoginPageState extends State<LoginPage> {
                       onPressed: () async {
                         await UserSimplePreferences.setUsername(username);
                         await UserSimplePreferences.setPassword(password);
-                        print("User name: $username");
-                        print("Password: $password");
+                       // print("User name: $username");
+                       // print("Password: $password");
 
                         var snackBar = SnackBar(
                           content: Text('please enter valid email 0r password'),
@@ -128,8 +128,10 @@ class _LoginPageState extends State<LoginPage> {
                         );
 
                         username == '' || password == '' ?
+                             // ignore: use_build_context_synchronously
                              ScaffoldMessenger.of(context).showSnackBar(snackBar)
                                 
+                            // ignore: use_build_context_synchronously
                             : Navigator.push(
                                 context,
                                 MaterialPageRoute(

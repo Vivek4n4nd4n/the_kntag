@@ -1,6 +1,4 @@
-import 'dart:ffi';
 
-import 'package:flutter/material.dart';
 
 class NotifData {
   String img;

@@ -1,5 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:the_kntag/massege/messageview.dart';
+
 
 class MsgConst {
   String title;
@@ -36,8 +35,26 @@ massegedatas() {
   msglist.add(details);
 
   details = MsgConst(
-    title: '#Book Club',
-    joind: '13 joined',
+    title: '#Music club',
+    joind: '11 joined',
+    spot: '12/25, Spot left',
+    profi: profi,
+    prof: [pic1, pic2, pic3],
+  );
+  msglist.add(details);
+
+  details = MsgConst(
+    title: '#Comedy Show',
+    joind: '20 joined',
+    spot: '12/25, Spot left',
+    profi: profi,
+    prof: [pic1, pic2, pic3],
+  );
+  msglist.add(details);
+
+  details = MsgConst(
+    title: '#Magic Show',
+    joind: '18 joined',
     spot: '12/25, Spot left',
     profi: profi,
     prof: [pic1, pic2, pic3],
@@ -46,7 +63,7 @@ massegedatas() {
 
   details = MsgConst(
     title: '#Book Club',
-    joind: '13 joined',
+    joind: '10 joined',
     spot: '12/25, Spot left',
     profi: profi,
     prof: [pic1, pic2, pic3],
@@ -54,26 +71,8 @@ massegedatas() {
   msglist.add(details);
 
   details = MsgConst(
-    title: '#Book Club',
-    joind: '13 joined',
-    spot: '12/25, Spot left',
-    profi: profi,
-    prof: [pic1, pic2, pic3],
-  );
-  msglist.add(details);
-
-  details = MsgConst(
-    title: '#Book Club',
-    joind: '13 joined',
-    spot: '12/25, Spot left',
-    profi: profi,
-    prof: [pic1, pic2, pic3],
-  );
-  msglist.add(details);
-
-  details = MsgConst(
-    title: '#Book Club',
-    joind: '13 joined',
+    title: '#Swimming Club',
+    joind: '7 joined',
     spot: '12/25, Spot left',
     profi: profi,
     prof: [pic1, pic2, pic3],

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:the_kntag/colors.dart';
+import 'package:the_kntag/creattag/post_setting.dart';
+import 'package:the_kntag/massege/Chat/msg_widow_chat.dart';
 import 'package:the_kntag/massege/msg_construct.dart';
 import 'package:the_kntag/notification/notif_construct.dart';
 
@@ -57,7 +59,7 @@ class _MassageState extends State<Massage> {
                     color: black,
                   ))
             ],
-            bottom: TabBar(
+            bottom:const TabBar(
               labelColor: Colors.black,
               indicatorColor: Colors.blue,
               tabs: [
@@ -73,44 +75,46 @@ class _MassageState extends State<Massage> {
               ],
             ),
           ),
-          body: TabBarView(
-            children: [
-              ListView.builder(
-                  itemCount: msgdetails.length,
-                  itemBuilder: (context, index) {
-                    return MsgTabs(
+          body:
+             TabBarView(
+              children: [
+                 GestureDetector(
+            onTap: () {
+              
+            },
+              child:  ListView.builder(
+                    itemCount: msgdetails.length,
+                    itemBuilder: (context, index) {
+                      return MsgTabs(
                         title: msgdetails[index].title,
                         joind: msgdetails[index].joind,
                         spot: msgdetails[index].spot,
                         prof: msgdetails[index].prof,
                       );
-                  }),
-
-
-                    ListView.builder(
-                  itemCount: msgdetails.length,
-                  itemBuilder: (context, index) {
-                    return MsgTabs(
+                    }),),
+                ListView.builder(
+                    itemCount: msgdetails.length,
+                    itemBuilder: (context, index) {
+                      return MsgTabs(
                         title: msgdetails[index].title,
                         joind: msgdetails[index].joind,
                         spot: msgdetails[index].spot,
                         prof: msgdetails[index].prof,
                       );
-                  }),
-
-
-                    ListView.builder(
-                  itemCount: msgdetails.length,
-                  itemBuilder: (context, index) {
-                    return MsgTabs(
+                    }),
+                ListView.builder(
+                    itemCount: msgdetails.length,
+                    itemBuilder: (context, index) {
+                      return MsgTabs(
                         title: msgdetails[index].title,
                         joind: msgdetails[index].joind,
                         spot: msgdetails[index].spot,
                         prof: msgdetails[index].prof,
                       );
-                  }),
-            ],
-          )),
+                    }),
+              ],
+            ),
+          ),
     );
   }
 }

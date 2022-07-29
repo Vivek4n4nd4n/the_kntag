@@ -1,9 +1,10 @@
-import 'dart:ui';
+
 
 import 'package:flutter/material.dart';
 import 'package:the_kntag/colors.dart';
 import 'package:the_kntag/group/constructor.dart';
 
+// ignore: must_be_immutable
 class Savedpage extends StatefulWidget {
   String title;
   String location;
@@ -56,7 +57,7 @@ class _SavedpageState extends State<Savedpage> {
                           child: Padding(
                             padding: const EdgeInsets.only(top: 20, bottom: 10),
                             child: Text(
-                              title,
+                              widget.title,
                               style: TextStyle(
                                   color: blue,
                                   fontSize: 15,
@@ -67,7 +68,7 @@ class _SavedpageState extends State<Savedpage> {
                         Align(
                             alignment: Alignment.center,
                             child: Text(
-                              '  $location \n  ${date} ${time}',
+                              '  $location \n  $date $time',
                               style: TextStyle(fontSize: 12),
                             ))
                       ]),

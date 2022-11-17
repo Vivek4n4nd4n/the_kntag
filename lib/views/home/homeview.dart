@@ -5,6 +5,7 @@ import 'package:the_kntag/group/constructor.dart';
 import 'package:the_kntag/map/g_map.dart';
 import 'package:the_kntag/views/home/event_datailspage.dart';
 import 'package:the_kntag/views/home/hometag.dart';
+import 'package:the_kntag/views/loginview.dart/loginview.dart';
 
 import '../loginview.dart/shared_pref.dart';
 
@@ -21,15 +22,18 @@ class _HomeviewState extends State<Homeview> {
   List<Groupdatas> grouptag = groups();
   @override
   Widget build(BuildContext context) {
-   // final height = MediaQuery.of(context).size.height;
-   // final width = MediaQuery.of(context).size.width;
+    // final height = MediaQuery.of(context).size.height;
+    // final width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: background,
       appBar: AppBar(
         backgroundColor: background,
         elevation: 0,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.of(
+                context);
+          },
           icon: Icon(
             Icons.menu,
             color: black,
@@ -67,7 +71,7 @@ class _HomeviewState extends State<Homeview> {
         children: [
           Center(
             child: Gmap(onPicked: (pickedData) {
-             // print(pickedData.latLong.latitude);
+              // print(pickedData.latLong.latitude);
               //print(pickedData.latLong.longitude);
               //print(pickedData.address);
             }),

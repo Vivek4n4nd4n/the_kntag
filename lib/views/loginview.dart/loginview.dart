@@ -43,10 +43,16 @@ class _LoginPageState extends State<LoginPage> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(
-              height: height * 0.15,
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Align(alignment: Alignment.topRight,
+                child: IconButton(onPressed: (){}, icon:const Icon(Icons.logout_rounded))),
             ),
-            Center(
+           
+            SizedBox(
+              height: height * 0.10,
+            ),
+            const Center(
               child: Text(
                 ' Creat \n Connect \n Celebrate',
                 style: TextStyle(

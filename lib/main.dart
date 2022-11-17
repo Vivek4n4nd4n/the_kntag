@@ -34,15 +34,17 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: username != null && password != null
-              ? Bottombar()
-              //  Chatwindow()
-              : LoginPage()
+          home: 
+          LoginPage()
+          //username != null && password != null
+             // ? Bottombar()
+              
+             // : LoginPage()
           //ProfilePage()
           // ProfSaveView()
           // ProfilePage()
 
-          //   Bottombar()
+          // Bottombar()
           //GroupView()
           // Homeview()
           //
